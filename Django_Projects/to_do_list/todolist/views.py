@@ -4,7 +4,10 @@ from django.shortcuts import render
 
 
 def home(request):
-    return render(request, "todolist/home.html")
+    context = {'content_post': request.POST, }
+    # return render(request, "todolist/home.html", {'abc': str(request.POST)})
+    # return render(request, "todolist/home.html", context.todo_add)
+    return render(request, "todolist/home.html", context)
 
 
 def aboutPage(request):
