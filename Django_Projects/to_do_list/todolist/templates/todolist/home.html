@@ -1,0 +1,40 @@
+{% extends 'todolist/base.html' %}
+{% block 主页高亮 %}active{% endblock 主页高亮 %}
+{% block 主体 %}
+<div class="table-responsive">
+	<table class="table table-hover">
+	  <thead class="thead-light">
+	    <tr>
+	      <th scope="col">序号</th>
+	      <th scope="col">待办事项</th>
+        <th scope="col">编辑</th>
+	      <th scope="col">划掉</th>
+	      <th scope="col">删除</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr>
+	      <th scope="row">1</th>
+        <td>Mark</td>
+	      <td><a href="{% url 'todolist:edit' %}" class="text-success">编辑</a></td>
+        <td><a href="#" class="text-info">划掉</a></td>
+        <td><a href="#" class="text-danger">删除</a></td>
+	    </tr>
+	    <tr>
+	      <th scope="row">2</th>
+	      <td>Jacob</td>
+        <td><a href="{% url 'todolist:edit' %}" class="text-success">编辑</a></td>
+        <td><a href="#" class="text-info">划掉</a></td>
+        <td><a href="#" class="text-danger">删除</a></td>
+	    </tr>
+	    <tr>
+	      <th scope="row">3</th>
+	      <td>Larry</td>
+        <td><a href="{% url 'todolist:edit' %}" class="text-success">编辑</a></td>
+        <td><a href="#" class="text-info">撤销</a></td>
+	      <td><a href="#" class="text-danger">删除</a></td>
+	    </tr>
+	  </tbody>
+	</table>
+</div>
+{% endblock 主体 %}
